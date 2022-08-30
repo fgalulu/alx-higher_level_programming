@@ -93,3 +93,4 @@ class Rectangle:
         Prints when rectangle object is deleted.
         """
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
