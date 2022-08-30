@@ -68,7 +68,7 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def __str__(sekf):
+    def __str__(self):
         """return string representation."""
         rect = []
         if self.__height == 0 or self.__width == 0:
