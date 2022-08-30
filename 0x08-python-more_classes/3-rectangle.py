@@ -74,7 +74,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         for n in range(0, self.__height):
-            rect.append("#" * self__width)
+            rect.append("#" * self.__width)
             if n != self.__height - 1:
                 rect.append("/n")
         return "".join(rect)
