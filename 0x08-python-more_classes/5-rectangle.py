@@ -85,7 +85,7 @@ class Rectangle:
         """
         return '{self.__class__.__name__}({self.width}, {self.height})'.\
             format(self=self)
-    
+
     def __del__(self):
         """
         Prints when rectangle object is deleted.
