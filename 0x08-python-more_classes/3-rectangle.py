@@ -70,11 +70,11 @@ class Rectangle:
 
     def __str__(self):
         """return string representation."""
-        rect = []
+        rect = ""
         if self.__height == 0 or self.__width == 0:
             return ""
         for n in range(0, self.__height):
-            rect.append("#" * self.__width)
+            rect += "#" * self.__width
             if n != self.__height - 1:
-                rect.append('/n')
-        return ''.join(rect)
+                rect += '/n'
+        return rect
