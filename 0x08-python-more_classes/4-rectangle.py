@@ -83,5 +83,5 @@ class Rectangle:
         """ return string representation of rectangle.
         Should be able to create anew instance using eval()
         """
-        return '{self.__class___.__name__}({self.width}, {self.height})'.\
+        return '{self.__class__.__name__}({self.width}, {self.height})'.\
             format(self=self)
