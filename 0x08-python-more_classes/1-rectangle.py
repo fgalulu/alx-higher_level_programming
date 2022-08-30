@@ -41,7 +41,7 @@ class Rectangle:
         """
             Get/set the width of the rectangle
         """
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
