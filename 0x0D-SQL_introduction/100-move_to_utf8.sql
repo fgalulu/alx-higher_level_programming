@@ -8,7 +8,7 @@ ALTER DATABASE
 -- convert table "first_table' to UTF8
 ALTER TABLE
 	hbtn_0c_0.first_table
-      CHARACTER SET utf8mb4
+	CONVERT TO CHARACTER SET utf8mb4
       COLLATE utf8mb4_unicode_ci;
 
 -- convert column 'name' to UTF8
