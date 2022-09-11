@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-script that prints the first State object from the db.
+Script that prints the first State object from the db,
+if the table is empty print nothing
 """
 
+import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sys import argv
