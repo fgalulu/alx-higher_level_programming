@@ -55,7 +55,7 @@ Testing more than two args
     >>> add_integer(16, 3,1)
     Traceback (most recent call last):
     ...
-    TypeError: too many arguments
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 Testing String type args for b
     >>> add_integer(19, "ALX")
@@ -63,17 +63,11 @@ Testing String type args for b
     ...
     TypeError: b must be an integer
 
-Testing float  overflow
-    >>> add_integer(1, float('infin'))
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
 Testing Nan
 	 >>> add_integer(1, float('nan'))
 	 Traceback (most recent call last):
 	 ...
-	 TypeError: a must be an integer
+	 ValueError: cannot convert float NaN to integer
 
 Testing Nan Nan
     >>> add_integer(None, None)
