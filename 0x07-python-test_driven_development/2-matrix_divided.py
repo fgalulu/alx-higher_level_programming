@@ -3,17 +3,25 @@
 
 
 def matrix_divided(matrix, div):
-    """ uses two args, matrix and div """
-    if type(matrix) is not list or not all((type(i) is list)for i in matrix) \
-        or not all((isinstance(j, (int, float))for j in i)for i in matrix) \
-            or len(matrix[0]) == 0:
-        raise TypeError("matrix must be a matrix "
-                        "(list of lists) of integers/floats")
-    if not isinstance(div, (int, float)):
+    """Divides all elements in the matrix by div"""
+    if type(matrix) is not list:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+    size = None
+    for l in matrix:
+        if type(l) is not list:
+            raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
+        if size is None:
+            size = len(l)
+        elif size != len(l):
+            raise TypeError("Each row of the matrix must have the same size")
+        for i in l:
+            if type(i) is not int and type(i) is not float:
+                raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
+    if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-    elif div == 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
-    i = len(matrix[0])
-    if not all((len(x) == i)for x in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-    return ([list(map(lambda x: round(x / div, 2), r))for r in matrix])
+    return [[round(i / div, 2) for i in l] for l in matrix]
