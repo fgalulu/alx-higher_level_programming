@@ -22,7 +22,7 @@ Testing  list of lists of integers or floats
 
 Testing row of the matrix of the different size
 
-   >>> matrix_divided([1, 2, 3],[4, 5]], 3)
+   >>> matrix_divided([[1, 2, 3],[4, 5]], 3)
    Traceback (most recent call last):
          ...
 	 TypeError: Each row of the matrix must have the same size
@@ -40,7 +40,7 @@ Testing matrix not list
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Testing div equal to zero
-    >>> matrix_divided([1, 2, 3],[4, 5, 6]], 0)
+    >>> matrix_divided([[1, 2, 3],[4, 5, 6]], 0)
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
@@ -52,7 +52,7 @@ Testing no argument
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
 Testing more than two args 
-    >>> matrix_divided([1, 2, 3],[4, 5, 6]], 1, 8)
+    >>> matrix_divided([[1, 2, 3],[4, 5, 6]], 1, 8)
     Traceback (most recent call last):
     ...
     TypeError: matrix_divided() takes 2 positional arguments
