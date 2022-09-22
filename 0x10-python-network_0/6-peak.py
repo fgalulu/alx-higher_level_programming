@@ -5,7 +5,11 @@
 def find_peak(list_of_integers):
     """find largest value in unsorted array"""
     if list_of_integers:
-        list_of_integers.sort()
-        return list_of_integers[-1]
+        largest = list_of_integers[0]
+        for x in list_of_integers:
+            if x > largest:
+                largest = x
+
+        return largest
     else:
         return None
