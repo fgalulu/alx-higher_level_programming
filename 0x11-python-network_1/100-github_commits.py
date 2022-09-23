@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Github commits code challenge
 """
 
 import requests
