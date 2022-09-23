@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Takes your github credentials to uses the Github Api
 """
 
 import requests
