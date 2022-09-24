@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# function that finds a peak in unsorted arrays.
+""" function that finds a peak in unsorted arrays. """
 
 
 def find_peak(list_of_integers):
